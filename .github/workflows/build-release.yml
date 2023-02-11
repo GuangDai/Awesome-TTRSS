@@ -1,16 +1,7 @@
 name: "[builder] CI for releases"
 
 on:
-  repository_dispatch:
-    types: build
-  push:
-    branches:
-      - main
-      - dev
-    paths:
-      - "src/**"
-      - "Dockerfile"
-      - "docker-entrypoint.sh"
+  [workflow_dispatch]
 
 jobs:
   release:
